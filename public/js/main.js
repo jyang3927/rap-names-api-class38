@@ -3,7 +3,9 @@ document.querySelector('button').addEventListener('click', apiRequest)
 async function apiRequest(){
     const rapperName = document.querySelector('input').value
     try{
+        console.log(rapperName)
         const response = await fetch(`https://courageous-capris-eel.cyclic.app/api/${rapperName}`)
+        console.log(response)
         const data = await response.json()
 
         console.log(data)
